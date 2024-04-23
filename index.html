@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <div class="title">DOC's de Defesa</div>
+        <ul class="links">
+            <li>SIP</li>
+            <li>Autor</li>
+        </ul>        
+    </header>
+    <section>
+        <div class="inputs">
+            <label for="name">Nome do discente:</label>
+            <input type="text" name="discente" id="name"><br>
+            <label for="title">Título do Trabalho:</label>
+            <input type="text" name="título" id="title" size="85"><br>
+            <label for="date">Data:</label>
+            <input type="date" name="data" id="date">
+            <label for="time">Horário:</label>
+            <input type="text" name="hora" id="time" size="5">
+            <span class="radio-btns"> Local/Remota:
+                <span class="radio-btns">
+                    <input type="radio" name="local" id="presencial">
+                    <label for="presencial">Presencial</label>
+                </span>
+                <span class="radio-btns">
+                    <input type="radio" name="local" id="híbrida">
+                    <label for="híbrida">Híbrida</label>
+                </span>
+                <span class="radio-btns">
+                    <input type="radio" name="local" id="remota" checked>
+                    <label for="remota">Remota</label>
+                </span>
+            </span><br>
+            <div class="hidden-room">
+                <label for="sala">Local:</label>
+                <input type="text" name="sala" id="sala">
+            </div>
+            <div class="hidden-link">
+                <label for="link">Link da Webconferência:</label>
+                <input type="text" name="link" id="link">
+            </div>
+        </div>
+        <br><p>Examinadores:</p>
+
+        <!-- Orientador/Presidente -->
+        <label for="orientador">Orientador(a):</label>
+        <input type="text" name="orientador" id="orientador">
+        <input type="checkbox" name="presidente" id="presidente-checkbox" checked>
+        <label for="presidente-checkbox">Também é o Presidente</label>
+
+        <!-- Código para o examinador 1 -->
+        <div class="examinador">
+            <div>
+                <br><label for="examinador1">Examinador(a) 1:</label>
+                <input type="text" name="examinador1" id="examinador1">
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador1-titularidade" id="examinador1-titular" checked>
+                    <label for="examinador1-titular">Titular</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador1-titularidade" id="examinador1-suplente">
+                    <label for="examinador1-suplente">Suplente</label>
+                </span>
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador1-uni" class="visibility-trigger" id="examinador1-interno" checked>
+                    <label for="examinador1-interno">Interno</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador1-uni" class="visibility-trigger" id="examinador1-externo">
+                    <label for="examinador1-externo">Externo</label>
+                </span>
+            </div>
+            <span class="span-exams hid1">
+                <label class="origem" for="origem1">Instituição de Origem: </label>
+                <input class="origem" type="text" name="origem1" id="origem1" size="50">
+            </span>                
+        </div>
+
+        <!-- Código para o examinador 2 -->
+        <div class="examinador">
+            <div>
+                <br><label for="examinador2">Examinador(a) 2:</label>
+                <input type="text" name="examinador2" id="examinador2">
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador2-titularidade" id="examinador2-titular" checked>
+                    <label for="examinador2-titular">Titular</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador2-titularidade" id="examinador2-suplente">
+                    <label for="examinador2-suplente">Suplente</label>
+                </span>
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador2-uni" class="visibility-trigger" id="examinador2-interno" checked>
+                    <label for="examinador2-interno">Interno</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador2-uni" class="visibility-trigger" id="examinador2-externo">
+                    <label for="examinador2-externo">Externo</label>
+                </span>
+            </div>
+            <span class="span-exams hid2">
+                <label class="origem" for="origem2">Instituição de Origem: </label>
+                <input class="origem" type="text" name="origem2" id="origem2" size="50">
+            </span>                
+        </div>
+
+        <!-- Código para o examinador 3 -->
+        <div class="examinador">
+            <div>
+                <br><label for="examinador3">Examinador(a) 3:</label>
+                <input type="text" name="examinador3" id="examinador3">
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador3-titularidade" id="examinador3-titular" checked>
+                    <label for="examinador3-titular">Titular</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador3-titularidade" id="examinador3-suplente">
+                    <label for="examinador3-suplente">Suplente</label>
+                </span>
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador3-uni" class="visibility-trigger" id="examinador3-interno" checked>
+                    <label for="examinador3-interno">Interno</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador3-uni" class="visibility-trigger" id="examinador3-externo">
+                    <label for="examinador3-externo">Externo</label>
+                </span>
+            </div>
+            <span class="span-exams hid3">
+                <label class="origem" for="origem3">Instituição de Origem: </label>
+                <input class="origem" type="text" name="origem3" id="origem3" size="50">
+            </span>                
+        </div>
+
+        <!-- Código para o examinador 4 -->
+        <div class="examinador">
+            <div>
+                <br><label for="examinador4">Examinador(a) 4:</label>
+                <input type="text" name="examinador4" id="examinador4">
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador4-titularidade" id="examinador4-titular" checked>
+                    <label for="examinador4-titular">Titular</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador4-titularidade" id="examinador4-suplente">
+                    <label for="examinador4-suplente">Suplente</label>
+                </span>
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador4-uni" class="visibility-trigger" id="examinador4-interno" checked>
+                    <label for="examinador4-interno">Interno</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador4-uni" class="visibility-trigger" id="examinador4-externo">
+                    <label for="examinador4-externo">Externo</label>
+                </span>
+            </div>
+            <span class="span-exams hid4">
+                <label class="origem" for="origem4">Instituição de Origem: </label>
+                <input class="origem" type="text" name="origem4" id="origem4" size="50">
+            </span>                
+        </div>
+
+        <!-- Código para o examinador 5 -->
+        <div class="examinador">
+            <div>
+                <br><label for="examinador5">Examinador(a) 5:</label>
+                <input type="text" name="examinador5" id="examinador5">
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador5-titularidade" id="examinador5-titular" checked>
+                    <label for="examinador5-titular">Titular</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador5-titularidade" id="examinador5-suplente">
+                    <label for="examinador5-suplente">Suplente</label>
+                </span>
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador5-uni" class="visibility-trigger" id="examinador5-interno" checked>
+                    <label for="examinador5-interno">Interno</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador5-uni" class="visibility-trigger" id="examinador5-externo">
+                    <label for="examinador5-externo">Externo</label>
+                </span>
+            </div>
+            <span class="span-exams hid5">
+                <label class="origem" for="origem5">Instituição de Origem: </label>
+                <input class="origem" type="text" name="origem5" id="origem5" size="50">
+            </span>                
+        </div>
+        
+        <!-- Código para o examinador 6 -->
+        <div class="examinador">
+            <div>
+                <br><label for="examinador6">Examinador(a) 6:</label>
+                <input type="text" name="examinador6" id="examinador6">
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador6-titularidade" id="examinador6-titular" checked>
+                    <label for="examinador6-titular">Titular</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador6-titularidade" id="examinador6-suplente">
+                    <label for="examinador6-suplente">Suplente</label>
+                </span>
+            </div>
+            <div class="exam-btns">
+                <span class="span-exams">
+                    <input type="radio" name="examinador6-uni" class="visibility-trigger" id="examinador6-interno" checked>
+                    <label for="examinador6-interno">Interno</label>
+                </span>
+                <span class="span-exams">
+                    <input type="radio" name="examinador6-uni" class="visibility-trigger" id="examinador6-externo" value="Externo">
+                    <label for="examinador6-externo">Externo</label>
+                </span>
+            </div>
+            <span class="span-exams hid6">
+                <label class="origem" for="origem6">Instituição de Origem:</label>
+                <input type="text" name="origem6" id="origem6" size="50">
+            </span>
+        </div>
+        
+        
+        <br><br><button>Criar Documentação</button>
+    </section>
+
+</body>
+</html>
