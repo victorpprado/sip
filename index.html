@@ -23,12 +23,12 @@
             <form>
                 <div class="row gy-2">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" placeholder="placeholder">
                         <label>Nome do discente</label>
                     </div>
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="title">
-                        <label for="title" class="form-label">Título do Trabalho:</label>
+                        <input type="text" class="form-control" id="title" placeholder="placeholder">
+                        <label for="title" class="form-label">Título</label>
                     </div>
                 </div>
                 <div class="row gy-2">
@@ -64,17 +64,17 @@
                     </div>
                     </div>
                 </div>
-                <p>Examinadores:</p>
+                <b>Examinadores</b>
                 <!-- Orientador/Presidente -->
                 <div class="row">
                     <div class="col-9">
                         <div class="form-floating">
-                            <input type="text" class="form-control form-control-sm" id="orientador">
-                             <label class="form-label" id="orientador">Orientador(a):</label>
+                            <input type="text" class="form-control" id="orientador" placeholder="placeholder">
+                            <label class="form-label" id="orientador">Orientador(a):</label>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="form-check"> 
+                        <div class="form-check form-switch"> 
                             <input type="checkbox" class="form-check-input" id="presidente-checkbox" checked>
                             <label for="presidente-checkbox" class="form-check-label">Também é o Presidente</label>
                     </div>
@@ -84,33 +84,35 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador1">
+                                <input type="text" class="form-control" id="examinador1" placeholder="placeholder">
                                 <label for="examinador1">Examinador(a) 1:</label>
                             </div>
                         </div>
-                        <div class="exam-btns col">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador1-titularidade" id="examinador1-titular" checked>
-                                <label for="examinador1-titular">Titular</label>
+                        <div class="col exam-btns">
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador1-titularidade" id="examinador1-titular" checked>
+                                <label for="examinador1-titular" class="form-check-label">Titular</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador1-titularidade" id="examinador1-suplente">
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador1-titularidade" class="form-check-input" id="examinador1-suplente">
                                 <label for="examinador1-suplente">Suplente</label>
                             </span>
                         </div>
-                        <div class="exam-btns col">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador1-uni" class="visibility-trigger" id="examinador1-interno" checked>
+                        <div class="col exam-btns">
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador1-uni" class="form-check-input visibility-trigger" id="examinador1-interno" checked>
                                 <label for="examinador1-interno">Interno</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador1-uni" class="visibility-trigger" id="examinador1-externo">
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador1-uni" class="form-check-input visibility-trigger" id="examinador1-externo">
                                 <label for="examinador1-externo">Externo</label>
                             </span>
                         </div>
                         <span class="col span-exams hid1">
-                            <label class="origem" for="origem1">Instituição de Origem: </label>
-                            <input class="origem" type="text" name="origem1" id="origem1" size="50">
+                            <div class="form-floating">
+                                <input class="form-control origem" type="text" id="origem1" placeholder="placeholder">
+                                <label class="origem" for="origem1">Instituição de Origem</label>
+                            </div>
                         </span>                
                     </div>
 
@@ -118,33 +120,35 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador2">
+                                <input type="text" class="form-control" id="examinador2" placeholder="placeholder">
                                 <label for="examinador2">Examinador(a) 2:</label>
                             </div>
                         </div>
-                        <div class="exam-btns col">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador2-titularidade" id="examinador2-titular" checked>
+                        <div class="col exam-btns">
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador2-titularidade" id="examinador2-titular" checked>
                                 <label for="examinador2-titular">Titular</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador2-titularidade" id="examinador2-suplente">
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador2-titularidade" id="examinador2-suplente">
                                 <label for="examinador2-suplente">Suplente</label>
                             </span>
                         </div>
                         <div class="exam-btns col">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador2-uni" class="visibility-trigger" id="examinador2-interno" checked>
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador2-uni" class="form-check-input visibility-trigger" id="examinador2-interno" checked>
                                 <label for="examinador2-interno">Interno</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador2-uni" class="visibility-trigger" id="examinador2-externo">
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador2-uni" class="form-check-input visibility-trigger" id="examinador2-externo">
                                 <label for="examinador2-externo">Externo</label>
                             </span>
                         </div>
                         <span class="span-exams hid2 col">
-                            <label class="origem" for="origem2">Instituição de Origem: </label>
-                            <input class="origem" type="text" name="origem2" id="origem2" size="50">
+                            <div class="form-floating">
+                                <input class="form-control origem" type="text" name="origem2" id="origem2" placeholder="placeholder" size="50">
+                                <label class="origem" for="origem2">Instituição de Origem </label>
+                            </div>
                         </span>                
                     </div>
 
@@ -152,33 +156,35 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador3">
+                                <input type="text" class="form-control" id="examinador3" placeholder="placeholder">
                                 <label for="examinador3">Examinador(a) 3:</label>
                             </div>
                         </div>
                         <div class="exam-btns col">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador3-titularidade" id="examinador3-titular" checked>
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador3-titularidade" id="examinador3-titular" checked>
                                 <label for="examinador3-titular">Titular</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador3-titularidade" id="examinador3-suplente">
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador3-titularidade" id="examinador3-suplente">
                                 <label for="examinador3-suplente">Suplente</label>
                             </span>
                         </div>
                         <div class="exam-btns col">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador3-uni" class="visibility-trigger" id="examinador3-interno" checked>
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador3-uni" class="form-check-input visibility-trigger" id="examinador3-interno" checked>
                                 <label for="examinador3-interno">Interno</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador3-uni" class="visibility-trigger" id="examinador3-externo">
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador3-uni" class="form-check-input visibility-trigger" id="examinador3-externo">
                                 <label for="examinador3-externo">Externo</label>
                             </span>
                         </div>
-                        <span class="span-exams hid3 col">
-                            <label class="origem" for="origem3">Instituição de Origem: </label>
-                            <input class="origem" type="text" name="origem3" id="origem3" size="50">
+                        <span class="col span-exams hid3">
+                            <div class="form-floating">
+                                <input class="form-control origem" type="text" name="origem3" id="origem3" placeholder="placeholder" size="50">
+                                <label class="origem" for="origem3">Instituição de Origem </label>
+                            </div>
                         </span>                
                     </div>
 
@@ -186,33 +192,35 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador4">
+                                <input type="text" class="form-control" id="examinador4" placeholder="placeholder">
                                 <label for="examinador4">Examinador(a) 4:</label>
                             </div>
                         </div>
                         <div class="col exam-btns">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador4-titularidade" id="examinador4-titular" checked>
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador4-titularidade" id="examinador4-titular" checked>
                                 <label for="examinador4-titular">Titular</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador4-titularidade" id="examinador4-suplente">
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador4-titularidade" id="examinador4-suplente">
                                 <label for="examinador4-suplente">Suplente</label>
                             </span>
                         </div>
                         <div class="col exam-btns">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador4-uni" class="visibility-trigger" id="examinador4-interno" checked>
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador4-uni" class="form-check-input visibility-trigger" id="examinador4-interno" checked>
                                 <label for="examinador4-interno">Interno</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador4-uni" class="visibility-trigger" id="examinador4-externo">
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador4-uni" class="form-check-input visibility-trigger" id="examinador4-externo">
                                 <label for="examinador4-externo">Externo</label>
                             </span>
                         </div>
                         <span class="col span-exams hid4">
-                            <label class="origem" for="origem4">Instituição de Origem: </label>
-                            <input class="origem" type="text" name="origem4" id="origem4" size="50">
+                            <div class="form-floating">
+                                <input class="form-control origem" type="text" name="origem4" id="origem4" placeholder="placeholder" size="50">
+                                <label class="origem" for="origem4">Instituição de Origem </label>
+                            </div>
                         </span>                
                     </div>
 
@@ -220,33 +228,35 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador5">
+                                <input type="text" class="form-control" id="examinador5" placeholder="placeholder">
                                 <label for="examinador5">Examinador(a) 5:</label>
                             </div>
                         </div> 
                         <div class="col exam-btns">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador5-titularidade" id="examinador5-titular" checked>
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador5-titularidade" id="examinador5-titular" checked>
                                 <label for="examinador5-titular">Titular</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador5-titularidade" id="examinador5-suplente">
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador5-titularidade" id="examinador5-suplente">
                                 <label for="examinador5-suplente">Suplente</label>
                             </span>
                         </div>
                         <div class="col exam-btns">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador5-uni" class="visibility-trigger" id="examinador5-interno" checked>
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador5-uni" class="form-check-input visibility-trigger" id="examinador5-interno" checked>
                                 <label for="examinador5-interno">Interno</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador5-uni" class="visibility-trigger" id="examinador5-externo">
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador5-uni" class="form-check-input visibility-trigger" id="examinador5-externo">
                                 <label for="examinador5-externo">Externo</label>
                             </span>
                         </div>
                         <span class="col span-exams hid5">
-                            <label class="origem" for="origem5">Instituição de Origem: </label>
-                            <input class="origem" type="text" name="origem5" id="origem5" size="50">
+                            <div class="form-floating">
+                                <input class="form-control origem" type="text" name="origem5" id="origem5" placeholder="placeholder" size="50">
+                                <label class="origem" for="origem5">Instituição de Origem </label>
+                            </div>
                         </span>                
                     </div>
                     
@@ -254,38 +264,41 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador6">
+                                <input type="text" class="form-control" id="examinador6" placeholder="placeholder">
                                 <label for="examinador6">Examinador(a) 6:</label>
                             </div>
                         </div>
                         <div class="col exam-btns">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador6-titularidade" id="examinador6-titular" checked>
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador6-titularidade" id="examinador6-titular" checked>
                                 <label for="examinador6-titular">Titular</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador6-titularidade" id="examinador6-suplente">
+                            <span class="form-check span-exams">
+                                <input type="radio" class="form-check-input" name="examinador6-titularidade" id="examinador6-suplente">
                                 <label for="examinador6-suplente">Suplente</label>
                             </span>
                         </div>
                         <div class="col exam-btns">
-                            <span class="span-exams">
-                                <input type="radio" name="examinador6-uni" class="visibility-trigger" id="examinador6-interno" checked>
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador6-uni" class="form-check-input visibility-trigger" id="examinador6-interno" checked>
                                 <label for="examinador6-interno">Interno</label>
                             </span>
-                            <span class="span-exams">
-                                <input type="radio" name="examinador6-uni" class="visibility-trigger" id="examinador6-externo" value="Externo">
+                            <span class="form-check span-exams">
+                                <input type="radio" name="examinador6-uni" class="form-check-input visibility-trigger" id="examinador6-externo" value="Externo">
                                 <label for="examinador6-externo">Externo</label>
                             </span>
                         </div>
                         <span class="col span-exams hid6">
-                            <label class="origem" for="origem6">Instituição de Origem:</label>
-                            <input type="text" name="origem6" id="origem6" size="50">
+                            <div class="form-floating">
+                                <input type="text" name="origem6" class="form-control" id="origem6" placeholder="placeholder">
+                                <label class="origem" for="origem6">Instituição de Origem</label>
+                            </div>
                         </span>
                     </div>
                 </div>    
                 
-                <button>Criar Documentação</button>
+                <button class="btn btn-outline-primary" data-bs-toggle="button">Criar Documentação</button>
+                
             </form>
         </div>
     </section>
