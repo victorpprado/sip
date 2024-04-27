@@ -16,33 +16,37 @@ li {
     margin: 0 0.25em;
 }
 
-.radio-btns {
-    margin: 0 20px;;
-}
-
-.hidden-room,
-.hidden-link,
 .hid1,
 .hid2,
 .hid3,
 .hid4,
 .hid5,
-.hid6 {
+.hid6,
+.hidden-room,
+#sala
+ {
     display: none;
 }
 
-.examinador {
-    display: flex;
-    flex-direction: row;
-    padding: 20px 0 20px 0;
+#name-label,
+#title-label,
+#date-label,
+#hour-label,
+#link-label {
+    background-color: rgba(228, 236, 244, 0.951);
 }
 
-.exam-btns {
-    display: flex;
-    flex-direction: column;
-}
-.span-exams {
-    padding: 5px 20px 0 10px;
+#local-label {
+    background-color: rgba(244, 228, 240, 0.951)
 }
 
+.box {
+    background-color: rgba(228, 236, 244, 0.951);
+    border: solid 1px;
+    border-radius: 5px;
 
+}
+
+.form-check-inline {
+    gap: 10px;
+}

@@ -12,58 +12,86 @@
 </head>
 <body>
     <header>
-        <div class="title">DOC's de Defesa</div>
+        <div></div>
         <ul class="links">
-            <li>SIP</li>
-            <li>Autor</li>
+            <b><li>SIP</li></b>
+            <b><li>Autor</li></b>
         </ul>        
     </header>
     <section>
         <div class="container">
+            <span class="row mb-2"><b>DOC's de Defesa</b></span>
             <form>
-                <div class="row gy-2">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="name" placeholder="placeholder">
-                        <label>Nome do discente</label>
+                
+                    <div class="input-group mb-1">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="name-label" onclick="document.querySelector('#nome').focus()">Discente</span>
+                        </div>
+                        <input type="text" class="form-control" id="nome" placeholder="Nome do aluno" required>
                     </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="title" placeholder="placeholder">
-                        <label for="title" class="form-label">Título</label>
+                    <div class="input-group mb-1">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="title-label" onclick="document.querySelector('#título').focus()">Título</span>
+                        </div>
+                        <input type="text" class="form-control" id="título" placeholder="Título da Dissertação/Tese" required>
                     </div>
-                </div>
-                <div class="row gy-2">
-                    <div class="col-4">
-                        <label for="date">Data:</label>
-                        <input type="date" name="data" id="date">
-                        <label for="time">Horário:</label>
-                        <input type="text" name="hora" id="time" size="5">
-                    </div>    
-                    <div class="col-8">    
-                        <span class="radio-btns"> Local/Remota:
-                            <span class="radio-btns">
-                                <input type="radio" name="local" id="presencial">
-                                <label for="presencial">Presencial</label>
-                            </span>
-                            <span class="radio-btns">
-                                <input type="radio" name="local" id="híbrida">
-                                <label for="híbrida">Híbrida</label>
-                            </span>
-                            <span class="radio-btns">
-                                <input type="radio" name="local" id="remota" checked>
-                                <label for="remota">Remota</label>
-                            </span>
-                    </span>
-                    <div class="hidden-room">
-                        <label for="sala">Local:</label>
-                        <input type="text" name="sala" id="sala">
+                
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group mb-1">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="date-label" onclick="document.querySelector('#data').focus()">Data</span>
+                            </div>
+                            <input type="date" class="form-control" id="data" placeholder="data" required>
+                        </div>
                     </div>
-                    <div class="hidden-link">
-                        <label for="link">Link da Webconferência:</label>
-                        <input type="text" name="link" id="link">
+                    <div class="col">
+                        <div class="input-group mb-1">
+                            <input type="text" class="form-control" id="hora" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="hour-label" onclick="document.querySelector('#hora').focus()">Hora</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="box">
+                            <span class="input-group form-check form-check-inline"><b>Local/Remota:</b>
+                                <div class="form-check form-check-inline radio-btns">
+                                    <input type="radio" name="local" class="form-check-input" id="presencial">
+                                    <label class="form-check-label" for="presencial">Presencial</label>
+                                </div>
+                                <div class="form-check form-check-inline radio-btns">
+                                    <input type="radio" name="local" class="form-check-input" id="híbrida">
+                                    <label class="form-check-label" for="híbrida">Híbrida</label>
+                                </div>
+                                <div class="form-check form-check-inline radio-btns">
+                                    <input type="radio" name="local" class="form-check-input" id="remota" checked>
+                                    <label class="form-check-label" for="remota">Remota</label>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="input-group">
+                            <div class="hidden-link">
+                                <span class="input-group-text" id="link-label" onclick="document.querySelector('#link').focus()">Link</span>
+                            </div>
+                            <input type="text" class="form-control" id="link">                         
+                            
+
+                            <div class="hidden-room">
+                                <span class="input-group-text" id="local-label"onclick="document.querySelector('#sala').focus()">Local</span>
+                            </div>
+                            <input type="text" class="form-control" id="sala">
+
+
+                            
+                        </div>
+                            
+                    </div>
+                </div>   
                     
-                    </div>
-                    </div>
-                </div>
+
+
+                
                 <b>Examinadores</b>
                 <!-- Orientador/Presidente -->
                 <div class="row">
@@ -299,6 +327,10 @@
                 
                 <button class="btn btn-outline-primary" data-bs-toggle="button">Criar Documentação</button>
                 
+
+          
+
+            </div>    
             </form>
         </div>
     </section>
