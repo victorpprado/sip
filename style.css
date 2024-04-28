@@ -1,19 +1,7 @@
 /* Page Style */
 
-header,
-.links {
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-    list-style: none;
-}
-
-header {
-    justify-content: space-between;
-}
-
-li {
-    margin: 0 0.25em;
+.navbar {
+    background-color: rgb(20, 52, 84);
 }
 
 .hid1,

@@ -11,27 +11,44 @@
     
 </head>
 <body>
-    <header>
-        <div></div>
-        <ul class="links">
-            <b><li>SIP</li></b>
-            <b><li>Autor</li></b>
-        </ul>        
-    </header>
+
+<!-- Navigation bar -->
+
+<nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container">
+        <a href="https://www.ufes.br/" target="_blank">
+            <img src="./img/ufes-logo-0.png" alt="Logo da Ufes">
+        </a>
+        
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="https://academico.ufes.br/" class="nav-link active" target="_blank">Acadêmico</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://secretaria.cchn.ufes.br/formularios" class="nav-link active" target="_blank">Formulários</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+    <!-- Middle Section with the main content of the page -->
     <section>
         <div class="container">
-            <span class="row mb-2"><b>DOC's de Defesa</b></span>
+            <div class="d-flex justify-content-center mt-2 mb-2">
+                <span class="row text-primary"><b>DOC's de Defesa</b></span>
+            </div>
             <form>
                 
                     <div class="input-group mb-1">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="name-label" onclick="document.querySelector('#nome').focus()">Discente</span>
+                            <label class="input-group-text" id="name-label" for="nome">Discente</label>
                         </div>
                         <input type="text" class="form-control" id="nome" placeholder="Nome do aluno" required>
                     </div>
                     <div class="input-group mb-1">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="title-label" onclick="document.querySelector('#título').focus()">Título</span>
+                            <label class="input-group-text" id="title-label" for="título">Título</label>
                         </div>
                         <input type="text" class="form-control" id="título" placeholder="Título da Dissertação/Tese" required>
                     </div>
@@ -40,7 +57,7 @@
                     <div class="col">
                         <div class="input-group mb-1">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="date-label" onclick="document.querySelector('#data').focus()">Data</span>
+                                <label class="input-group-text" id="date-label" for="data">Data</lab>
                             </div>
                             <input type="date" class="form-control" id="data" placeholder="data" required>
                         </div>
@@ -49,7 +66,7 @@
                         <div class="input-group mb-1">
                             <input type="text" class="form-control" id="hora" required>
                             <div class="input-group-append">
-                                <span class="input-group-text" id="hour-label" onclick="document.querySelector('#hora').focus()">Hora</span>
+                                <label class="input-group-text" id="hour-label" for="hora">Hora</label>
                             </div>
                         </div>
                     </div>
@@ -72,13 +89,13 @@
                         </div>
                         <div class="input-group">
                             <div class="hidden-link">
-                                <span class="input-group-text" id="link-label" onclick="document.querySelector('#link').focus()">Link</span>
+                                <label class="input-group-text" id="link-label" for="link">Link</label>
                             </div>
-                            <input type="text" class="form-control" id="link">                         
+                            <input type="text" class="form-control rounded" id="link">                         
                             
 
                             <div class="hidden-room">
-                                <span class="input-group-text" id="local-label"onclick="document.querySelector('#sala').focus()">Local</span>
+                                <label class="input-group-text" id="local-label" for="sala">Local</label>
                             </div>
                             <input type="text" class="form-control" id="sala">
 
@@ -101,7 +118,7 @@
                             <label class="form-label" id="orientador">Orientador(a):</label>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col d-flex align-items-center">
                         <div class="form-check form-switch"> 
                             <input type="checkbox" class="form-check-input" id="presidente-checkbox" checked>
                             <label for="presidente-checkbox" class="form-check-label">Também é o Presidente</label>
@@ -325,13 +342,39 @@
                     </div>
                 </div>    
                 
-                <button class="btn btn-outline-primary" data-bs-toggle="button">Criar Documentação</button>
-                
-
-          
-
+                <button class="btn btn-primary mt-1" data-bs-toggle="button">Criar Documentação</button>          
             </div>    
             </form>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                    <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#carta">Corpo do e-mail: Carta-convite</button>
+                    
+                    <div class="row collapse show" id="carta">
+                        <div class="col">
+                            <div class="box">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit neque odio quam? Voluptate quaerat omnis repellendus laborum quas, in aliquam delectus amet dicta inventore sequi fuga, porro harum consequatur sed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="col">
+                <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#cartaz">Corpo do e-mail: Cartaz de Divulgação</button>
+        
+                <div class="row collapse show" id="cartaz">
+                    <div class="col">
+                        <div class="box">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt asperiores maiores veritatis porro quis! Delectus doloremque sint beatae quia expedita provident anmi ipsa, ullam quod, nam molestiae repellendus?</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>        
+            </div>
         </div>
     </section>
 
