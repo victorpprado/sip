@@ -38,3 +38,7 @@
 .form-check-inline {
     gap: 10px;
 }
+
+#git-logo {
+    width: 20px;
+}

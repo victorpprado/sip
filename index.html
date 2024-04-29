@@ -13,7 +13,6 @@
 <body>
 
 <!-- Navigation bar -->
-
 <nav class="navbar navbar-expand-md navbar-dark">
     <div class="container">
         <a href="https://www.ufes.br/" target="_blank">
@@ -38,19 +37,19 @@
             <div class="d-flex justify-content-center mt-2 mb-2">
                 <span class="row text-primary"><b>DOC's de Defesa</b></span>
             </div>
-            <form>
+            <form id="teste">
                 
                     <div class="input-group mb-1">
                         <div class="input-group-prepend">
                             <label class="input-group-text" id="name-label" for="nome">Discente</label>
                         </div>
-                        <input type="text" class="form-control" id="nome" placeholder="Nome do aluno" required>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do aluno">
                     </div>
                     <div class="input-group mb-1">
                         <div class="input-group-prepend">
                             <label class="input-group-text" id="title-label" for="título">Título</label>
                         </div>
-                        <input type="text" class="form-control" id="título" placeholder="Título da Dissertação/Tese" required>
+                        <input type="text" class="form-control" id="título" name="título" placeholder="Título da Dissertação/Tese">
                     </div>
                 
                 <div class="row">
@@ -59,12 +58,12 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" id="date-label" for="data">Data</lab>
                             </div>
-                            <input type="date" class="form-control" id="data" placeholder="data" required>
+                            <input type="date" class="form-control" id="data" name="data" placeholder="data">
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group mb-1">
-                            <input type="text" class="form-control" id="hora" required>
+                            <input type="text" class="form-control" id="hora" name="hora">
                             <div class="input-group-append">
                                 <label class="input-group-text" id="hour-label" for="hora">Hora</label>
                             </div>
@@ -74,15 +73,15 @@
                         <div class="box">
                             <span class="input-group form-check form-check-inline"><b>Local/Remota:</b>
                                 <div class="form-check form-check-inline radio-btns">
-                                    <input type="radio" name="local" class="form-check-input" id="presencial">
+                                    <input type="radio" name="local" class="form-check-input" id="presencial" value="presencial">
                                     <label class="form-check-label" for="presencial">Presencial</label>
                                 </div>
                                 <div class="form-check form-check-inline radio-btns">
-                                    <input type="radio" name="local" class="form-check-input" id="híbrida">
+                                    <input type="radio" name="local" class="form-check-input" id="híbrida" value="híbrida">
                                     <label class="form-check-label" for="híbrida">Híbrida</label>
                                 </div>
                                 <div class="form-check form-check-inline radio-btns">
-                                    <input type="radio" name="local" class="form-check-input" id="remota" checked>
+                                    <input type="radio" name="local" class="form-check-input" id="remota" value="remota" checked>
                                     <label class="form-check-label" for="remota">Remota</label>
                                 </div>
                             </span>
@@ -91,13 +90,13 @@
                             <div class="hidden-link">
                                 <label class="input-group-text" id="link-label" for="link">Link</label>
                             </div>
-                            <input type="text" class="form-control rounded" id="link">                         
+                            <input type="text" class="form-control rounded" id="link" name="link">                          
                             
 
                             <div class="hidden-room">
                                 <label class="input-group-text" id="local-label" for="sala">Local</label>
                             </div>
-                            <input type="text" class="form-control" id="sala">
+                            <input type="text" class="form-control rounded" id="sala" name="local">
 
 
                             
@@ -114,13 +113,13 @@
                 <div class="row">
                     <div class="col-9">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="orientador" placeholder="placeholder">
-                            <label class="form-label" id="orientador">Orientador(a):</label>
+                            <input type="text" class="form-control" id="orientador" placeholder="placeholder" name="orientador">
+                            <label class="form-label" id="orientador">Orientador(a)</label>
                         </div>
                     </div>
                     <div class="col d-flex align-items-center">
                         <div class="form-check form-switch"> 
-                            <input type="checkbox" class="form-check-input" id="presidente-checkbox" checked>
+                            <input type="checkbox" class="form-check-input" id="presidente-checkbox" name="presidente" checked>
                             <label for="presidente-checkbox" class="form-check-label">Também é o Presidente</label>
                     </div>
                     </div>
@@ -129,224 +128,231 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador1" placeholder="placeholder">
-                                <label for="examinador1">Examinador(a) 1:</label>
+                                <input type="text" class="form-control" id="examinador1" placeholder="examinador1" name="examinador1">
+                                <label for="examinador1">Examinador(a) 1</label>
                             </div>
                         </div>
                         <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador1-titularidade" id="examinador1-titular" checked>
+                                <input type="radio" class="form-check-input" name="examinador1-titularidade" id="examinador1-titular" value="examinador1-titular" checked>
                                 <label for="examinador1-titular" class="form-check-label">Titular</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador1-titularidade" class="form-check-input" id="examinador1-suplente">
+                                <input type="radio" name="examinador1-titularidade" class="form-check-input" id="examinador1-suplente" value="examinador1-suplente">
                                 <label for="examinador1-suplente">Suplente</label>
                             </span>
                         </div>
                         <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador1-uni" class="form-check-input visibility-trigger" id="examinador1-interno" checked>
+                                <input type="radio" name="examinador1-intExt" class="form-check-input visibility-trigger" id="examinador1-interno" value="examinador1-interno" checked>
                                 <label for="examinador1-interno">Interno</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador1-uni" class="form-check-input visibility-trigger" id="examinador1-externo">
+                                <input type="radio" name="examinador1-intExt" class="form-check-input visibility-trigger" id="examinador1-externo" value="examinador1-externo">
                                 <label for="examinador1-externo">Externo</label>
                             </span>
                         </div>
                         <span class="col span-exams hid1">
                             <div class="form-floating">
-                                <input class="form-control origem" type="text" id="origem1" placeholder="placeholder">
-                                <label class="origem" for="origem1">Instituição de Origem</label>
+                                <input class="form-control universidade" type="text" id="universidade1" placeholder="universidade1">
+                                <label for="universidade1">Instituição de Origem</label>
                             </div>
                         </span>                
                     </div>
-
+                    
                     <!-- Código para o examinador 2 -->
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador2" placeholder="placeholder">
-                                <label for="examinador2">Examinador(a) 2:</label>
+                                <input type="text" class="form-control" id="examinador2" placeholder="examinador2" name="examinador2">
+                                <label for="examinador2">Examinador(a) 2</label>
                             </div>
                         </div>
                         <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador2-titularidade" id="examinador2-titular" checked>
-                                <label for="examinador2-titular">Titular</label>
+                                <input type="radio" class="form-check-input" name="examinador2-titularidade" id="examinador2-titular" value="examinador2-titular" checked>
+                                <label for="examinador2-titular" class="form-check-label">Titular</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador2-titularidade" id="examinador2-suplente">
+                                <input type="radio" name="examinador2-titularidade" class="form-check-input" id="examinador2-suplente" value="examinador2-suplente">
                                 <label for="examinador2-suplente">Suplente</label>
                             </span>
                         </div>
-                        <div class="exam-btns col">
+                        <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador2-uni" class="form-check-input visibility-trigger" id="examinador2-interno" checked>
+                                <input type="radio" name="examinador2-intExt" class="form-check-input visibility-trigger" id="examinador2-interno" value="examinador2-interno" checked>
                                 <label for="examinador2-interno">Interno</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador2-uni" class="form-check-input visibility-trigger" id="examinador2-externo">
+                                <input type="radio" name="examinador2-intExt" class="form-check-input visibility-trigger" id="examinador2-externo" value="examinador2-externo">
                                 <label for="examinador2-externo">Externo</label>
                             </span>
                         </div>
-                        <span class="span-exams hid2 col">
+                        <span class="col span-exams hid2">
                             <div class="form-floating">
-                                <input class="form-control origem" type="text" name="origem2" id="origem2" placeholder="placeholder" size="50">
-                                <label class="origem" for="origem2">Instituição de Origem </label>
+                                <input class="form-control universidade" type="text" id="universidade2" placeholder="universidade2">
+                                <label for="universidade2">Instituição de Origem</label>
                             </div>
                         </span>                
                     </div>
-
+                    
                     <!-- Código para o examinador 3 -->
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador3" placeholder="placeholder">
-                                <label for="examinador3">Examinador(a) 3:</label>
+                                <input type="text" class="form-control" id="examinador3" placeholder="examinador3" name="examinador3">
+                                <label for="examinador3">Examinador(a) 3</label>
                             </div>
                         </div>
-                        <div class="exam-btns col">
+                        <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador3-titularidade" id="examinador3-titular" checked>
-                                <label for="examinador3-titular">Titular</label>
+                                <input type="radio" class="form-check-input" name="examinador3-titularidade" id="examinador3-titular" value="examinador3-titular" checked>
+                                <label for="examinador3-titular" class="form-check-label">Titular</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador3-titularidade" id="examinador3-suplente">
+                                <input type="radio" name="examinador3-titularidade" class="form-check-input" id="examinador3-suplente" value="examinador3-suplente">
                                 <label for="examinador3-suplente">Suplente</label>
                             </span>
                         </div>
-                        <div class="exam-btns col">
+                        <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador3-uni" class="form-check-input visibility-trigger" id="examinador3-interno" checked>
+                                <input type="radio" name="examinador3-intExt" class="form-check-input visibility-trigger" id="examinador3-interno" value="examinador3-interno" checked>
                                 <label for="examinador3-interno">Interno</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador3-uni" class="form-check-input visibility-trigger" id="examinador3-externo">
+                                <input type="radio" name="examinador3-intExt" class="form-check-input visibility-trigger" id="examinador3-externo" value="examinador3-externo">
                                 <label for="examinador3-externo">Externo</label>
                             </span>
                         </div>
                         <span class="col span-exams hid3">
                             <div class="form-floating">
-                                <input class="form-control origem" type="text" name="origem3" id="origem3" placeholder="placeholder" size="50">
-                                <label class="origem" for="origem3">Instituição de Origem </label>
+                                <input class="form-control universidade" type="text" id="universidade3" placeholder="universidade3">
+                                <label for="universidade3">Instituição de Origem</label>
                             </div>
                         </span>                
                     </div>
+                    
 
                     <!-- Código para o examinador 4 -->
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador4" placeholder="placeholder">
-                                <label for="examinador4">Examinador(a) 4:</label>
+                                <input type="text" class="form-control" id="examinador4" placeholder="examinador4" name="examinador4">
+                                <label for="examinador4">Examinador(a) 4</label>
                             </div>
                         </div>
                         <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador4-titularidade" id="examinador4-titular" checked>
-                                <label for="examinador4-titular">Titular</label>
+                                <input type="radio" class="form-check-input" name="examinador4-titularidade" id="examinador4-titular" value="examinador4-titular" checked>
+                                <label for="examinador4-titular" class="form-check-label">Titular</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador4-titularidade" id="examinador4-suplente">
+                                <input type="radio" name="examinador4-titularidade" class="form-check-input" id="examinador4-suplente" value="examinador4-suplente">
                                 <label for="examinador4-suplente">Suplente</label>
                             </span>
                         </div>
                         <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador4-uni" class="form-check-input visibility-trigger" id="examinador4-interno" checked>
+                                <input type="radio" name="examinador4-intExt" class="form-check-input visibility-trigger" id="examinador4-interno" value="examinador4-interno" checked>
                                 <label for="examinador4-interno">Interno</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador4-uni" class="form-check-input visibility-trigger" id="examinador4-externo">
+                                <input type="radio" name="examinador4-intExt" class="form-check-input visibility-trigger" id="examinador4-externo" value="examinador4-externo">
                                 <label for="examinador4-externo">Externo</label>
                             </span>
                         </div>
                         <span class="col span-exams hid4">
                             <div class="form-floating">
-                                <input class="form-control origem" type="text" name="origem4" id="origem4" placeholder="placeholder" size="50">
-                                <label class="origem" for="origem4">Instituição de Origem </label>
+                                <input class="form-control universidade" type="text" id="universidade4" placeholder="universidade4">
+                                <label for="universidade4">Instituição de Origem</label>
                             </div>
                         </span>                
                     </div>
+                    
 
                     <!-- Código para o examinador 5 -->
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador5" placeholder="placeholder">
-                                <label for="examinador5">Examinador(a) 5:</label>
+                                <input type="text" class="form-control" id="examinador5" placeholder="examinador5" name="examinador5">
+                                <label for="examinador5">Examinador(a) 5</label>
                             </div>
-                        </div> 
+                        </div>
                         <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador5-titularidade" id="examinador5-titular" checked>
-                                <label for="examinador5-titular">Titular</label>
+                                <input type="radio" class="form-check-input" name="examinador5-titularidade" id="examinador5-titular" value="examinador5-titular" checked>
+                                <label for="examinador5-titular" class="form-check-label">Titular</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador5-titularidade" id="examinador5-suplente">
+                                <input type="radio" name="examinador5-titularidade" class="form-check-input" id="examinador5-suplente" value="examinador5-suplente">
                                 <label for="examinador5-suplente">Suplente</label>
                             </span>
                         </div>
                         <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador5-uni" class="form-check-input visibility-trigger" id="examinador5-interno" checked>
+                                <input type="radio" name="examinador5-intExt" class="form-check-input visibility-trigger" id="examinador5-interno" value="examinador5-interno" checked>
                                 <label for="examinador5-interno">Interno</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador5-uni" class="form-check-input visibility-trigger" id="examinador5-externo">
+                                <input type="radio" name="examinador5-intExt" class="form-check-input visibility-trigger" id="examinador5-externo" value="examinador5-externo">
                                 <label for="examinador5-externo">Externo</label>
                             </span>
                         </div>
                         <span class="col span-exams hid5">
                             <div class="form-floating">
-                                <input class="form-control origem" type="text" name="origem5" id="origem5" placeholder="placeholder" size="50">
-                                <label class="origem" for="origem5">Instituição de Origem </label>
+                                <input class="form-control universidade" type="text" id="universidade5" placeholder="universidade5">
+                                <label for="universidade5">Instituição de Origem</label>
                             </div>
                         </span>                
                     </div>
                     
+
                     <!-- Código para o examinador 6 -->
                     <div class="row">
                         <div class="col">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="examinador6" placeholder="placeholder">
-                                <label for="examinador6">Examinador(a) 6:</label>
+                                <input type="text" class="form-control" id="examinador6" placeholder="examinador6" name="examinador6">
+                                <label for="examinador6">Examinador(a) 6</label>
                             </div>
                         </div>
                         <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador6-titularidade" id="examinador6-titular" checked>
-                                <label for="examinador6-titular">Titular</label>
+                                <input type="radio" class="form-check-input" name="examinador6-titularidade" id="examinador6-titular" value="examinador6-titular" checked>
+                                <label for="examinador6-titular" class="form-check-label">Titular</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" class="form-check-input" name="examinador6-titularidade" id="examinador6-suplente">
+                                <input type="radio" name="examinador6-titularidade" class="form-check-input" id="examinador6-suplente" value="examinador6-suplente">
                                 <label for="examinador6-suplente">Suplente</label>
                             </span>
                         </div>
                         <div class="col exam-btns">
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador6-uni" class="form-check-input visibility-trigger" id="examinador6-interno" checked>
+                                <input type="radio" name="examinador6-intExt" class="form-check-input visibility-trigger" id="examinador6-interno" value="examinador6-interno" checked>
                                 <label for="examinador6-interno">Interno</label>
                             </span>
                             <span class="form-check span-exams">
-                                <input type="radio" name="examinador6-uni" class="form-check-input visibility-trigger" id="examinador6-externo" value="Externo">
+                                <input type="radio" name="examinador6-intExt" class="form-check-input visibility-trigger" id="examinador6-externo" value="examinador6-externo">
                                 <label for="examinador6-externo">Externo</label>
                             </span>
                         </div>
                         <span class="col span-exams hid6">
                             <div class="form-floating">
-                                <input type="text" name="origem6" class="form-control" id="origem6" placeholder="placeholder">
-                                <label class="origem" for="origem6">Instituição de Origem</label>
+                                <input class="form-control universidade" type="text" id="universidade6" placeholder="universidade6">
+                                <label for="universidade6">Instituição de Origem</label>
                             </div>
-                        </span>
+                        </span>                
                     </div>
-                </div>    
-                
-                <button class="btn btn-primary mt-1" data-bs-toggle="button">Criar Documentação</button>          
+    
+                <!-- Button to submit form -->
+                <div class="d-grid col-4 gap-2 mx-auto">
+                    <button type="submit" form="teste" class="btn btn-lg btn-primary mt-3">Criar Documentação</button>          
+                </div>
             </div>    
-            </form>
+        </form>
         </div>
         <br>
+
+        <!-- Text to e-mail Docs -->
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -377,6 +383,12 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="navbar d-flex justify-content-center">
+            <a href="https://github.com/victorpprado/sip" class="text-white" target="_blank">Repository: <img src="./img/github-icon-2.svg" alt="Author's Github" id="git-logo"></a>
+        </div>
+    </footer>
 
 </body>
 </html>
