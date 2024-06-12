@@ -16,7 +16,7 @@
 <nav class="navbar navbar-expand-md navbar-dark">
     <div class="container">
         <a href="https://www.ufes.br/" target="_blank">
-            <img src="./img/ufes-logo-0.png" alt="Logo da Ufes">
+            <img src="../img/ufes-logo-0.png" alt="Logo da Ufes">
         </a>
         
         <ul class="navbar-nav">
@@ -37,7 +37,7 @@
             <div class="d-flex justify-content-center mt-2 mb-2">
                 <span class="row text-primary"><b>DOC's de Defesa</b></span>
             </div>
-            <form id="teste">
+            <form id="defesaForm" method="post" action="localhost:8000/form">
                 
                     <div class="input-group mb-1">
                         <div class="input-group-prepend">
@@ -345,7 +345,7 @@
     
                 <!-- Button to submit form -->
                 <div class="d-grid col-4 gap-2 mx-auto">
-                    <button type="submit" form="teste" class="btn btn-lg btn-primary mt-3">Criar Documentação</button>          
+                    <button type="submit" form="defesaForm" class="btn btn-lg btn-primary mt-3">Criar Documentação</button>          
                 </div>
             </div>    
         </form>
@@ -386,7 +386,7 @@
 
     <footer>
         <div class="navbar d-flex justify-content-center">
-            <a href="https://github.com/victorpprado/sip" class="text-white" target="_blank">Repository: <img src="./img/github-icon-2.svg" alt="Author's Github" id="git-logo"></a>
+            <a href="https://github.com/victorpprado/sip" class="text-white" target="_blank">Repository: <img src="../img/github-icon-2.svg" alt="Author's Github" id="git-logo"></a>
         </div>
     </footer>
 
